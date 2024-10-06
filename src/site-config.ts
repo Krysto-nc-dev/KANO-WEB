@@ -1,21 +1,25 @@
 export const SiteConfig = {
-  title: "Now.ts",
-  description: "A template description for Now.ts",
-  prodUrl: "https://demo.nowts.app",
-  domain: "nowts.app",
+  title: "Kano",
+  description: "Gestion de stocks methode kanban",
+  prodUrl: "https://demo.kano.app",
+  domain: "kano.nc",
   appIcon: "/images/icon.png",
   company: {
-    name: "NowTS Inc.",
-    address: "1234 Main St, New York, NY 10001",
+    name: "Krysto SARL",
+    address: "8 rue Higginson, Nouméa",
   },
   brand: {
-    primary: "#007291",
+    primary: "#EEC023",
+  },
+  email: {
+    from: `Krysto <test@resend.dev>`,
+    contact: "test@resend.dev",
   },
   maker: {
-    image: "https://melvynx.com/images/me/twitter-en.jpg",
-    website: "https://melvynx.com",
-    twitter: "https://twitter.com/melvyn_me",
-    name: "Melvynx",
+    // image: "https://melvynx.com/images/me/twitter-en.jpg",
+    website: "https://krysto.nc",
+    // twitter: "https://twitter.com/melvyn_me",
+    name: "Stoyann VELTEN - Krysto",
   },
   features: {
     /**

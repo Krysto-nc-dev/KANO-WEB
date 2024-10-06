@@ -60,7 +60,7 @@ export function LandingHeader() {
     >
       <div className="mx-auto flex w-full max-w-3xl items-center justify-between px-4 lg:px-8">
         <div className="flex items-center gap-1">
-          <LogoSvg size={24} />
+          <LogoSvg size={100} />
           <motion.p
             style={{
               scale: useTransform(
@@ -71,7 +71,7 @@ export function LandingHeader() {
             }}
             className="flex origin-left items-center text-xl font-semibold uppercase max-sm:hidden"
           >
-            {SiteConfig.title}
+            {/* {SiteConfig.title} */}
           </motion.p>
         </div>
         <motion.nav

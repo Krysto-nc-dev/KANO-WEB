@@ -7,5 +7,8 @@
     ["twc\\.[^`]+\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
     ["twc\\([^`]*?\\).*?\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
-  "cSpell.words": ["zustand"]
+  "cSpell.words": [
+    "zustand"
+  ],
+  "WillLuke.nextjs.hasPrompted": true
 }
