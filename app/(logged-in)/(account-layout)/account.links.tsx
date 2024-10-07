@@ -8,7 +8,7 @@ export const getAccountNavigation = (): NavigationGroup[] => {
 
 const ACCOUNT_LINKS: NavigationGroup[] = [
   {
-    title: "Your profile",
+    title: "Votre profile",
     links: [
       {
         href: "/account",
@@ -28,7 +28,7 @@ const ACCOUNT_LINKS: NavigationGroup[] = [
       {
         href: "/account/billing",
         Icon: CreditCard,
-        label: "Billing",
+        label: "Facturation",
         hidden: !SiteConfig.features.enableSingleMemberOrg,
       },
     ],

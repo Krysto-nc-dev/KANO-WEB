@@ -16,16 +16,16 @@ export default function DeleteProfilePage() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Delete your profile</CardTitle>
+        <CardTitle>Supprimer votre profil</CardTitle>
         <CardDescription>
-          Deleting your account means that all your personal data will be
-          permanently erased and your ongoing subscription will be terminated.
-          Please be aware that this action is irreversible.
+          La suppression de votre compte signifie que toutes vos données
+          personnelles seront définitivement effacées et votre abonnement en
+          cours sera résilié. Veuillez noter que cette action est irréversible.
         </CardDescription>
         <CardDescription>
-          Also, if you are the owner of an organization, the organization will
-          be deleted and your subscription will be cancelled. All your data will
-          be lost.
+          De plus, si vous êtes le propriétaire d'une organisation,
+          l'organisation sera supprimée et votre abonnement sera annulé. Toutes
+          vos données seront perdues.
         </CardDescription>
       </CardHeader>
       <CardFooter className="flex justify-end gap-2">
@@ -34,22 +34,22 @@ export default function DeleteProfilePage() {
           size="lg"
           onClick={() => {
             alertDialog.add({
-              title: "Delete your account ?",
-              description: "Are you sure you want to delete your profile?",
+              title: "Supprimer votre compte ?",
+              description: "Êtes-vous sûr de vouloir supprimer votre profil ?",
               action: {
-                label: "Delete",
+                label: "Supprimer",
                 onClick: async () => {
                   await accountAskDeletionAction();
-                  toast.success("Your deletion has been asked.", {
+                  toast.success("Votre demande de suppression a été envoyée.", {
                     description:
-                      "Please check your email for further instructions.",
+                      "Veuillez vérifier votre e-mail pour des instructions supplémentaires.",
                   });
                 },
               },
             });
           }}
         >
-          Delete
+          Supprimer
         </Button>
       </CardFooter>
     </Card>

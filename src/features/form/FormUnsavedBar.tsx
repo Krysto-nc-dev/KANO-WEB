@@ -32,7 +32,7 @@ export const FormUnsavedBar = <T extends FieldValues>(props: FormProps<T>) => {
 
   useWarnIfUnsavedChanges(
     isDirty,
-    "You have unsaved changes. Are you sure you want to leave?",
+    "Vous avez des changements non sauvegardés. Êtes-vous sûr de vouloir quitter ?",
   );
 
   if (typeof window === "undefined") return null;
@@ -67,7 +67,7 @@ export const FormUnsavedBar = <T extends FieldValues>(props: FormProps<T>) => {
                 className="pointer-events-auto flex items-center gap-4 rounded-md border bg-card p-1 lg:p-2"
               >
                 <Typography variant="small">
-                  Changes have been made. Save now !
+                  Des modifications ont été apportées. Enregistrez maintenant !
                 </Typography>
                 <LoadingButton
                   size="sm"
@@ -77,7 +77,7 @@ export const FormUnsavedBar = <T extends FieldValues>(props: FormProps<T>) => {
                     submit();
                   }}
                 >
-                  Save{" "}
+                  Enregistrer{" "}
                   <KeyboardShortcut eventKey="cmd">
                     <CmdOrOption />
                   </KeyboardShortcut>

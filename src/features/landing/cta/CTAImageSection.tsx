@@ -8,7 +8,7 @@ export const CTAImageSection = () => {
     <div
       style={{
         backgroundImage:
-          "url(https://images.unsplash.com/photo-1707680639756-d37ea04572a9?q=80&w=2973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+          "url(https://plus.unsplash.com/premium_photo-1663040328859-48bddaa9dfeb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
         backgroundSize: "cover",
       }}
     >
@@ -20,13 +20,13 @@ export const CTAImageSection = () => {
           variant="h2"
           className="text-center text-5xl font-extrabold"
         >
-          Start getting a lot of followers
+          Gérer votre stock n'a jamais été aussi simple
         </Typography>
         <Typography className="text-center font-bold">
-          By posting every day with Threader !
+          Rejoignez Kano et optimisez votre activité artisanale !
         </Typography>
         <Link href="#pricing" className={buttonVariants({ size: "lg" })}>
-          Get started
+          Commencer maintenant
         </Link>
       </SectionLayout>
     </div>

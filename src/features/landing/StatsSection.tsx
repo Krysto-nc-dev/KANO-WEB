@@ -12,24 +12,24 @@ type StatProps = {
 
 const stats: StatProps[] = [
   {
-    number: 476,
+    number: 15,
     suffix: "K",
-    text: "Threads scheduled every month.",
+    text: "Produits gérés mensuellement.",
   },
   {
-    number: 1.44,
+    number: 3.5,
     suffix: "K",
-    text: "Users that use our platform.",
+    text: "Entreprises utilisant Kano pour gérer leur stock.",
   },
   {
-    number: 1.5,
+    number: 1.2,
     suffix: "M+",
-    text: "Interactions with posts created by our users.",
+    text: "Transactions enregistrées via notre plateforme.",
   },
   {
-    number: 192,
+    number: 25,
     suffix: "K",
-    text: "Users impacted by our published posts.",
+    text: "Commandes traitées et suivies via Kano.",
   },
 ];
 
@@ -41,7 +41,6 @@ export function StatsSection() {
           <div key={index} className="relative text-center md:px-5">
             <h4 className="mb-2 text-2xl font-bold tabular-nums md:text-3xl">
               <Counter from={0} to={stat.number} />
-
               {stat.suffix}
             </h4>
             <p className="text-sm text-muted-foreground">{stat.text}</p>

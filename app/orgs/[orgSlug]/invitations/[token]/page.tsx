@@ -32,7 +32,7 @@ const TokenSchema = z.object({
 
 export const generateMetadata = combineWithParentMetadata({
   title: "Invitation",
-  description: "You receive an invitation to join an organization.",
+  description: "Vous avez reçu une invitation à rejoindre une organisation.",
 });
 
 export default async function RoutePage(
@@ -45,7 +45,7 @@ export default async function RoutePage(
   });
 
   if (!organization) {
-    return <Page400 title="Invalid token 1" />;
+    return <Page400 title="Token invalide 1" />;
   }
 
   const verificationToken = await prisma.verificationToken.findUnique({
@@ -55,7 +55,7 @@ export default async function RoutePage(
   });
 
   if (!verificationToken) {
-    return <Page400 title="Invalid token 2" />;
+    return <Page400 title="Token invalide 2" />;
   }
 
   const user = await auth();
@@ -63,7 +63,7 @@ export default async function RoutePage(
   const tokenData = TokenSchema.parse(verificationToken.data);
 
   if (tokenData.orgId !== organization.id) {
-    return <Page400 title="Invalid token 3" />;
+    return <Page400 title="Token invalide 3" />;
   }
 
   if (!user) {
@@ -72,14 +72,15 @@ export default async function RoutePage(
         <Layout>
           <LayoutHeader>
             <LayoutTitle>
-              You've been invited to join {organization.name}
+              Vous avez été invité à rejoindre {organization.name}
             </LayoutTitle>
           </LayoutHeader>
           <LayoutContent>
             <Card>
               <CardHeader>
                 <CardTitle>
-                  You need to be authenticated to join {organization.name}
+                  Vous devez vous authentifier pour rejoindre{" "}
+                  {organization.name}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -87,7 +88,7 @@ export default async function RoutePage(
                   className={buttonVariants({ size: "lg" })}
                   href={`/auth/signin?callbackUrl=${getServerUrl()}/orgs/${organization.slug}/invitations/${props.params.token}&email=${tokenData.email}`}
                 >
-                  Sign in
+                  Se connecter
                 </Link>
               </CardContent>
             </Card>
@@ -111,7 +112,7 @@ export default async function RoutePage(
   if (
     verificationToken.identifier !== `${user.email}-invite-${organization.id}`
   ) {
-    return <Page400 title="Invalid email" />;
+    return <Page400 title="Email invalide" />;
   }
 
   return (
@@ -119,16 +120,18 @@ export default async function RoutePage(
       <Layout>
         <LayoutHeader>
           <LayoutTitle>
-            You've been invited to join {organization.name}
+            Vous avez été invité à rejoindre {organization.name}
           </LayoutTitle>
         </LayoutHeader>
         <LayoutContent>
           <Card>
             <CardHeader>
-              <CardTitle>One last step to join {organization.name}</CardTitle>
+              <CardTitle>
+                Dernière étape pour rejoindre {organization.name}
+              </CardTitle>
               <CardDescription>
-                By clicking on the button below, you agree to join{" "}
-                {organization.name} as a member.
+                En cliquant sur le bouton ci-dessous, vous acceptez de rejoindre{" "}
+                {organization.name} en tant que membre.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -151,7 +154,7 @@ export default async function RoutePage(
                     redirect(`/orgs/${organization.slug}`);
                   }}
                 >
-                  Join {organization.name}
+                  Rejoindre {organization.name}
                 </SubmitButton>
               </form>
             </CardContent>

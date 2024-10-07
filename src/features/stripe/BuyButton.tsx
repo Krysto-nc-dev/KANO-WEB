@@ -34,7 +34,7 @@ export const BuyButton = ({ priceId, orgSlug, ...props }: BuyButtonProps) => {
     mutationFn: async () => {
       if (session.status !== "authenticated") {
         router.push("/auth/signin");
-        toast.error("You must be authenticated to buy a plan");
+        toast.error("Vous devez être connecté pour effectuer un achat");
         return;
       }
 
@@ -44,7 +44,7 @@ export const BuyButton = ({ priceId, orgSlug, ...props }: BuyButtonProps) => {
       });
 
       if (!isActionSuccessful(result)) {
-        toast.error(result?.serverError ?? "Something went wrong");
+        toast.error(result?.serverError ?? "oups! quelquechose c'est mal passer");
         return;
       }
 

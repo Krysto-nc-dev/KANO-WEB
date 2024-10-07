@@ -138,7 +138,7 @@ export const orgConfirmDeletionAction = authAction
     });
 
     await sendEmail({
-      subject: "Your account has been deleted",
+      subject: "Votre compte KANO a été supprimé avec succès",
       to: ctx.user.email,
       react: AccountConfirmDeletionEmail(),
     });

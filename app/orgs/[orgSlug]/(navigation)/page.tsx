@@ -22,7 +22,7 @@ export default async function RoutePage(
   return (
     <Layout>
       <LayoutHeader>
-        <LayoutTitle>Dashboard</LayoutTitle>
+        <LayoutTitle>Tableau de bord</LayoutTitle>
       </LayoutHeader>
       <LayoutActions>
         {isInRoles(org.roles, ["ADMIN"]) ? (
@@ -30,7 +30,7 @@ export default async function RoutePage(
             href={`/orgs/${props.params.orgSlug}/settings/members`}
             className={buttonVariants({ variant: "outline" })}
           >
-            Invite member
+            Inviter un membre
           </Link>
         ) : null}
       </LayoutActions>

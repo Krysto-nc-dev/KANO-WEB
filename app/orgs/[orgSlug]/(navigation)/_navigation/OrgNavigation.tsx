@@ -34,7 +34,7 @@ export async function OrgNavigation({ children }: PropsWithChildren) {
             href={`/orgs/${org.slug}/settings`}
           >
             <Building size={16} className="mr-2" />
-            Settings
+            Paramètres
           </Link>
         </div>
       }
@@ -42,7 +42,7 @@ export async function OrgNavigation({ children }: PropsWithChildren) {
         <>
           <ContactFeedbackPopover>
             <Button size="sm" variant="outline">
-              Feedback
+              Retour d'expérience
             </Button>
           </ContactFeedbackPopover>
           <UserDropdown>

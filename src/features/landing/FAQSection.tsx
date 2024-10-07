@@ -27,25 +27,24 @@ export const FAQSection = (props: FeaturesPreviewProps) => {
           FAQ
         </Typography>
         <Typography variant="h2" className="text-5xl">
-          Frequently Asked Questions
+          Questions Fréquemment Posées
         </Typography>
       </div>
       <div className="flex-1">
         <Accordion type="single" collapsible>
-          {props.faq.map((e, i) => {
-            return (
-              <AccordionItem value={`item-${i}`} key={i}>
-                <AccordionTrigger className="text-left text-lg">
-                  {e.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-base">
-                  <ClientMarkdown>{e.answer}</ClientMarkdown>
-                </AccordionContent>
-              </AccordionItem>
-            );
-          })}
+          {props.faq.map((item, index) => (
+            <AccordionItem value={`item-${index}`} key={index}>
+              <AccordionTrigger className="text-left text-lg">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-base">
+                <ClientMarkdown>{item.answer}</ClientMarkdown>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
         </Accordion>
       </div>
     </SectionLayout>
   );
 };
+

@@ -46,7 +46,7 @@ export function OrganizationCommand() {
         <Search className="absolute left-2.5 top-2.5 size-4 text-muted-foreground" />
         <Input
           type="search"
-          placeholder="Search..."
+          placeholder="Recherche..."
           className="w-full appearance-none bg-background pl-8 shadow-none"
           onClick={() => {
             setOpen(true);
@@ -61,9 +61,9 @@ export function OrganizationCommand() {
         </div>
       </div>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Type a command or search..." />
+        <CommandInput placeholder="Tapez une commande ou recherchez..." />
         <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
+          <CommandEmpty>Aucun résultat trouvé.</CommandEmpty>
           {ORGANIZATION_LINKS.map((link, index) => (
             <CommandGroup heading={link.title} key={index}>
               {link.links.map((link) => (

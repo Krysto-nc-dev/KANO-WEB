@@ -28,7 +28,7 @@ export const PricingCard = (props: Plan) => {
     >
       {props.isPopular ? (
         <div className="absolute inset-x-0 top-0 flex items-center justify-center">
-          <Badge className="-translate-y-1/2">Popular</Badge>
+          <Badge className="-translate-y-1/2">Populaire</Badge>
         </div>
       ) : null}
       <CardHeader className="flex flex-col items-start gap-6 lg:gap-8">
@@ -36,12 +36,12 @@ export const PricingCard = (props: Plan) => {
           {props.name}
         </p>
         <div className="flex items-end justify-center gap-2">
-          <p className="text-5xl font-extrabold">${props.price}</p>
+          <p className="text-5xl font-extrabold">{props.price}</p>
           <Typography>{props.currency ?? "USD"}</Typography>
 
           {props.barredPrice ? (
             <div className="relative self-start">
-              <p className="text-lg font-bold">${props.barredPrice}</p>
+              <p className="text-lg font-bold">{props.barredPrice}</p>
               <div className="absolute top-1/2 h-0.5 w-full rotate-45 bg-red-500" />
             </div>
           ) : null}

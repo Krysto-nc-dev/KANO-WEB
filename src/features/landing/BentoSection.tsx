@@ -7,14 +7,7 @@ import { Typography } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
 import type { Variants } from "framer-motion";
 import { motion } from "framer-motion";
-import {
-  BarChart3,
-  Calendar,
-  CalendarCheck,
-  CheckCircle,
-  Sparkles,
-  X,
-} from "lucide-react";
+import { BarChart3, Calendar, CheckCircle, Sparkles, X } from "lucide-react";
 import { SectionLayout } from "./SectionLayout";
 
 export function BentoGridSection() {
@@ -56,7 +49,7 @@ const Skeleton1 = () => {
         />
         <div>
           <p className="text-xs text-neutral-500">
-            Create a Thread to announce Now.ts
+            Suivez votre stock en temps réel
           </p>
         </div>
       </motion.div>
@@ -65,8 +58,7 @@ const Skeleton1 = () => {
         className="flex flex-row items-start justify-end gap-2 rounded-2xl border border-border bg-background p-3"
       >
         <p className="text-xs text-neutral-500">
-          Today I announced my new project, Now.TS, the perfect way to create
-          professional Next.js application in days.
+          Gagnez en efficacité grâce à une gestion optimisée de vos produits.
         </p>
         <div className="size-6 shrink-0 rounded-full bg-gradient-to-r from-pink-500 to-violet-500" />
       </motion.div>
@@ -88,18 +80,19 @@ const Skeleton2 = () => {
       <motion.div>
         <Alert variant="default" className="">
           <Loader size={20} />
-          <AlertTitle>Schedule your threads...</AlertTitle>
+          <AlertTitle>Gérez vos stocks facilement...</AlertTitle>
         </Alert>
       </motion.div>
       <motion.div variants={variants}>
         <Alert variant="success" className="">
           <CheckCircle size={20} />
-          <AlertTitle>Your threads are now scheduled for 7:00 AM</AlertTitle>
+          <AlertTitle>Votre stock est maintenant à jour</AlertTitle>
         </Alert>
       </motion.div>
     </motion.div>
   );
 };
+
 const Skeleton3 = () => {
   const variants = {
     initial: {
@@ -130,6 +123,7 @@ const Skeleton3 = () => {
     </motion.div>
   );
 };
+
 const Skeleton4 = () => {
   const first = {
     initial: {
@@ -162,15 +156,15 @@ const Skeleton4 = () => {
         variants={first}
         className="flex h-full w-1/3 flex-col items-center justify-center rounded-2xl border border-border bg-background p-4"
       >
-        <Typography variant="large">+123 followers</Typography>
-        <Typography variant={"muted"}>In the last 30 days</Typography>
+        <Typography variant="large">+123 articles en stock</Typography>
+        <Typography variant={"muted"}>Dans les 30 derniers jours</Typography>
         <Typography variant={"muted"} className="text-green-500">
           +12%
         </Typography>
       </motion.div>
       <motion.div className="flex h-full w-1/3 flex-col items-center justify-center rounded-2xl border border-border bg-background p-4">
-        <Typography variant="large">+1.4 M Views</Typography>
-        <Typography variant={"muted"}>In the last 30 days</Typography>
+        <Typography variant="large">+1.4 M de vues</Typography>
+        <Typography variant={"muted"}>Dans les 30 derniers jours</Typography>
         <Typography variant={"muted"} className="text-green-500">
           +21%
         </Typography>
@@ -179,9 +173,9 @@ const Skeleton4 = () => {
         variants={second}
         className="flex h-full w-1/3 flex-col items-center justify-center rounded-2xl border border-border bg-background p-4"
       >
-        <Typography variant="large">1244 likes</Typography>
-        <Typography variant="large">766 replis</Typography>
-        <Typography variant={"muted"}>In the last 30 days</Typography>
+        <Typography variant="large">1244 ventes</Typography>
+        <Typography variant="large">766 avis</Typography>
+        <Typography variant={"muted"}>Dans les 30 derniers jours</Typography>
         <Typography variant={"muted"} className="text-green-500">
           +12%
         </Typography>
@@ -234,7 +228,7 @@ const Skeleton5 = () => {
           className="size-10 rounded-full"
         />
         <p className="text-xs text-neutral-500">
-          What I need to do to get more followers ?
+          Que puis-je faire pour optimiser mon stock ?
         </p>
       </motion.div>
       <motion.div
@@ -242,7 +236,7 @@ const Skeleton5 = () => {
         className="flex flex-row items-start justify-end gap-2 rounded-2xl border border-border bg-background p-3"
       >
         <div>
-          <p className="text-xs text-neutral-500">Searching...</p>
+          <p className="text-xs text-neutral-500">Recherche...</p>
           <motion.p
             className="text-xs text-neutral-500"
             variants={{
@@ -254,8 +248,8 @@ const Skeleton5 = () => {
               },
             }}
           >
-            Based on the Threads activity of the past 30 days, you should focus
-            creating content on Next.js
+            D'après l'activité des stocks des 30 derniers jours, concentrez-vous
+            sur la réduction des pertes.
           </motion.p>
         </div>
         <div className="size-6 shrink-0 rounded-full bg-gradient-to-r from-pink-500 to-violet-500" />
@@ -266,10 +260,10 @@ const Skeleton5 = () => {
 
 const items = [
   {
-    title: "AI Content Generation",
+    title: "Gestion de Stock AI",
     description: (
       <span className="text-sm">
-        Experience the power of AI in generating unique content.
+        Découvrez la puissance de l'IA pour une gestion optimale de vos stocks.
       </span>
     ),
     header: <Skeleton1 />,
@@ -277,10 +271,10 @@ const items = [
     icon: <Sparkles size={20} />,
   },
   {
-    title: "Schedule with ease",
+    title: "Planification Simplifiée",
     description: (
       <span className="text-sm">
-        We help you schedule your threads with ease.
+        Nous vous aidons à planifier vos mouvements de stock facilement.
       </span>
     ),
     header: <Skeleton2 />,
@@ -288,33 +282,32 @@ const items = [
     icon: <Calendar size={20} />,
   },
   {
-    title: "Calendar View",
+    title: "Vue d'ensemble",
     description: (
       <span className="text-sm">
-        See what you have planned for the day with our calendar view.
+        Consultez vos mouvements de stock du jour avec notre vue d'ensemble.
       </span>
     ),
     header: <Skeleton3 />,
     className: "md:col-span-1",
-    icon: <CalendarCheck size={20} />,
+    icon: <CheckCircle size={20} />,
   },
   {
-    title: "Threads Analysis",
+    title: "Analyse des Ventes",
     description: (
       <span className="text-sm">
-        Understand your threads with our powerful analytics.
+        Comprenez vos ventes avec nos outils d'analyse puissants.
       </span>
     ),
     header: <Skeleton4 />,
     className: "md:col-span-2",
     icon: <BarChart3 size={20} />,
   },
-
   {
-    title: "See what works",
+    title: "Analyse des Tendances",
     description: (
       <span className="text-sm">
-        Understand the hype and trends with our powerful research tools.
+        Comprenez les tendances avec nos outils de recherche avancés.
       </span>
     ),
     header: <Skeleton5 />,

@@ -17,9 +17,10 @@ export const UpgradeCard = async () => {
   return (
     <Card x-chunk="dashboard-02-chunk-0">
       <CardHeader className="p-2 pt-0 md:p-4">
-        <CardTitle>Upgrade to PRO</CardTitle>
+        <CardTitle>Passer à KANO PRO</CardTitle>
         <CardDescription>
-          Unlock all features and get unlimited access to our app.
+          Débloquez toutes les fonctionnalités et accédez sans limites à notre
+          application.
         </CardDescription>
       </CardHeader>
       <CardContent className="p-2 pt-0 md:p-4 md:pt-0">
@@ -27,7 +28,7 @@ export const UpgradeCard = async () => {
           href={`/orgs/${organization.slug}/settings/billing`}
           className={buttonVariants({ className: "w-full" })}
         >
-          Upgrade
+          Mettre à niveau
         </Link>
       </CardContent>
     </Card>

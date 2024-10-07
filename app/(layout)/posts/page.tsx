@@ -55,7 +55,7 @@ export default async function RoutePage(props: PageParams) {
             <FileQuestion />
             <Typography variant="h2">No posts found</Typography>
             <Link className={buttonVariants({ variant: "link" })} href="/posts">
-              View all posts
+              Voir tous les posts
             </Link>
           </div>
         </LayoutContent>

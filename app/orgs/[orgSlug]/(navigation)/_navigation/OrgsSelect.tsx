@@ -57,7 +57,7 @@ export const OrgsSelect = (props: OrganizationsSelectProps) => {
           </SelectItem>
         ))}
         {!SiteConfig.features.enableSingleMemberOrg ? (
-          <SelectItem value="new">Add a new organization</SelectItem>
+          <SelectItem value="new">Ajouter une nouvelle organisation</SelectItem>
         ) : null}
       </SelectContent>
     </Select>

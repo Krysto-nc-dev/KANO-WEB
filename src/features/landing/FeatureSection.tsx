@@ -16,18 +16,18 @@ export const FeaturesSection = ({
     <SectionLayout size="sm" className="relative " id="features">
       <div className="relative flex flex-col gap-16 lg:gap-28">
         <div className="flex flex-col items-center gap-2">
-          <Badge>The features you NEED.</Badge>
+          <Badge>Les fonctionnalités dont vous avez besoin.</Badge>
           <Typography variant="h2" className="m-auto max-w-xl text-center">
-            More than a post schedulure, we will help you <u>grow</u>.
+            Plus qu'une simple gestion de stock, Kano vous aide à{" "}
+            <u>optimiser</u> vos processus.
           </Typography>
           <Typography
             variant="muted"
             className="m-auto max-w-lg text-center text-base"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-            consequuntur! Similique, nulla placeat in expedita omnis ab error
-            eaque esse a doloremque, iusto libero eligendi, animi minus
-            architecto. Modi, consectetur?
+            Gagnez en efficacité avec notre solution de gestion de stock basée
+            sur la méthode Kanban. Suivez vos produits, réduisez les pertes et
+            améliorez la transparence.
           </Typography>
         </div>
         {features.map((f, i) => {
@@ -57,7 +57,7 @@ const FeatureLine = (props: FeatureLineProps) => {
   return (
     <div className="flex items-center gap-4 odd:flex-row-reverse max-lg:!flex-col">
       <div className="flex flex-1 flex-col items-start gap-2">
-        <Badge color="pink">{props.badge}</Badge>
+        <Badge color="green">{props.badge}</Badge>
         <Typography variant="h3" className="">
           {props.title}
         </Typography>

@@ -34,7 +34,6 @@ export const EmailForm = ({
   const submit = useMutation({
     mutationFn: async ({ email }: EmailActionSchemaType) => {
       const result = await addEmailAction({ email });
-   
 
       if (result?.data) {
         return result.data;
@@ -90,7 +89,7 @@ export const EmailForm = ({
                     <FormControl>
                       <Input
                         className="rounded-lg border-accent-foreground/20 bg-accent px-4 py-6 text-lg focus-visible:ring-foreground"
-                        placeholder="Ton email"
+                        placeholder="Votre email"
                         {...field}
                       />
                     </FormControl>
@@ -111,7 +110,7 @@ export const EmailForm = ({
                 <AlertCircle size={20} />
                 <AlertTitle>{submit.error.message}</AlertTitle>
                 <AlertDescription>
-                  Try another email address or contact us.
+                  Essayez une autre adresse e-mail ou contactez-nous.
                 </AlertDescription>
               </Alert>
             )}

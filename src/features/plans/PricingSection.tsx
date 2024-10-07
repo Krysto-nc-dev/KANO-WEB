@@ -15,10 +15,10 @@ export const Pricing = () => {
           variant="small"
           className="font-extrabold uppercase text-primary"
         >
-          Pricing
+          Tarification
         </Typography>
         <Typography variant="h2">
-          Try and choose the best plan for your business
+          Choisissez le plan idéal pour gérer votre activité
         </Typography>
       </div>
       <div className="flex w-full justify-center gap-4 max-md:flex-col lg:gap-8 xl:gap-12">

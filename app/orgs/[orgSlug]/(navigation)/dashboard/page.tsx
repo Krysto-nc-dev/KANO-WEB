@@ -8,6 +8,9 @@ import {
 } from "@/features/page/layout";
 import { combineWithParentMetadata } from "@/lib/metadata";
 import type { PageParams } from "@/types/next";
+import { ClientOrg } from "./ClientOrg";
+import { DonutChart } from "./donuts-chart";
+import { UsersChart } from "./users-chart";
 
 export const generateMetadata = combineWithParentMetadata({
   title: "Users",
@@ -24,7 +27,11 @@ export default async function RoutePage(props: PageParams) {
         <Button variant="outline">Supprimer</Button>
         <Button variant="invert">Créer</Button>
       </LayoutActions>
-      <LayoutContent className="flex  gap-6"></LayoutContent>
+      <LayoutContent className="flex  gap-6">
+        {/* <UsersChart />
+        <DonutChart />
+        <ClientOrg /> */}
+      </LayoutContent>
     </Layout>
   );
 }

@@ -12,8 +12,8 @@ import { AccountNavigation } from "./account-navigation";
 import { VerifyEmailButton } from "./account/verify-email/VerifyEmailButton";
 
 export const metadata: Metadata = {
-  title: "Account",
-  description: "Manage your account settings.",
+  title: "Compte",
+  description: "Gérez les paramètres de votre compte.",
 };
 
 export default async function RouteLayout(props: LayoutParams) {
@@ -27,8 +27,7 @@ export default async function RouteLayout(props: LayoutParams) {
             <Rabbit className="size-4" />
             <div>
               <Typography variant="large">
-                It looks like you are not logged in. Please sign in to access
-                your account settings.
+                Il semble que vous ne soyez pas connecté. Veuillez vous connecter pour accéder à vos paramètres de compte.
               </Typography>
               <Link
                 href="/auth/signin"
@@ -36,7 +35,7 @@ export default async function RouteLayout(props: LayoutParams) {
                   className: "mt-2",
                 })}
               >
-                Sign in
+                Se connecter
               </Link>
             </div>
           </Alert>
@@ -51,7 +50,7 @@ export default async function RouteLayout(props: LayoutParams) {
         <div className="flex items-center gap-4 bg-primary px-4 py-1">
           <CircleAlert size={16} />
           <Typography variant="small">
-            Email not verified. Please verify your email.
+            Email non vérifié. Veuillez vérifier votre email.
           </Typography>
           <VerifyEmailButton
             variant="invert"

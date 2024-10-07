@@ -4,7 +4,7 @@ import {
 } from "@/features/navigation/navigation.type";
 import { isInRoles } from "@/lib/organizations/isInRoles";
 import { OrganizationMembershipRole } from "@prisma/client";
-import { Home, User } from "lucide-react";
+import { Home, User, ShoppingCart, LandPlot, Factory, Archive } from "lucide-react";
 
 const replaceSlug = (href: string, slug: string) => {
   return href.replace(":organizationSlug", slug);
@@ -46,6 +46,26 @@ export const ORGANIZATION_LINKS: NavigationGroup[] = [
         href: `${ORGANIZATION_PATH}/users`,
         Icon: User,
         label: "Users",
+      },
+      {
+        href: `${ORGANIZATION_PATH}/suppliers`,
+        Icon: Factory,
+        label: "Fournisseurs",
+      },
+      {
+        href: `${ORGANIZATION_PATH}/products`,
+        Icon: ShoppingCart,
+        label: "Produits",
+      },
+      {
+        href: `${ORGANIZATION_PATH}/zones`,
+        Icon: LandPlot,
+        label: "zones",
+      },
+      {
+        href: `${ORGANIZATION_PATH}/kanbans`,
+        Icon: Archive,
+        label: "Kanbans",
       },
     ] satisfies NavigationLink[],
   },

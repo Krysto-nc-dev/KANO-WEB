@@ -29,7 +29,7 @@ export const FeaturesPreviewSection = (props: FeaturesPreviewProps) => {
       className="flex flex-col gap-8 lg:gap-16"
     >
       <Typography variant="h2" className="text-5xl">
-        Tout ce qu'il te faut pour créer une application rapidement
+        Tout ce qu'il te faut pour gérer efficacement ton stock
       </Typography>
       <div
         className="mt-4 flex flex-1 gap-4 px-2 max-lg:flex-col"

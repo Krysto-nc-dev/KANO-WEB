@@ -17,8 +17,8 @@ import {
 } from "../delete-account.action";
 
 export const generateMetadata = combineWithParentMetadata({
-  title: "Confirm deletion",
-  description: "One last step to delete your account.",
+  title: "Confirmer la suppression",
+  description: "Une dernière étape pour supprimer votre compte.",
 });
 
 export default async function RoutePage(props: PageParams) {
@@ -28,14 +28,14 @@ export default async function RoutePage(props: PageParams) {
   const invalidTokenCard = (
     <Card>
       <CardHeader>
-        <CardTitle>Invalid token</CardTitle>
+        <CardTitle>Jeton invalide</CardTitle>
       </CardHeader>
       <CardFooter>
         <Link
           href="/account/danger"
           className={buttonVariants({ variant: "outline" })}
         >
-          Retry
+          Réessayer
         </Link>
       </CardFooter>
     </Card>
@@ -54,10 +54,9 @@ export default async function RoutePage(props: PageParams) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Are you sure you want to delete your account ?</CardTitle>
+        <CardTitle>Êtes-vous sûr de vouloir supprimer votre compte ?</CardTitle>
         <CardDescription>
-          By clicking on the button below, you confirm that you want to delete
-          your account.
+          En cliquant sur le bouton ci-dessous, vous confirmez que vous souhaitez supprimer votre compte.
         </CardDescription>
       </CardHeader>
       <CardFooter className="flex justify-end gap-2">
@@ -65,7 +64,7 @@ export default async function RoutePage(props: PageParams) {
           href="/organizations"
           className={buttonVariants({ variant: "outline" })}
         >
-          Cancel
+          Annuler
         </Link>
         <form>
           <SubmitButton
@@ -77,7 +76,7 @@ export default async function RoutePage(props: PageParams) {
               });
             }}
           >
-            Delete account
+            Supprimer le compte
           </SubmitButton>
         </form>
       </CardFooter>
